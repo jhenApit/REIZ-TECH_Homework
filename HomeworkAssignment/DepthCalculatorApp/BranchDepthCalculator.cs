@@ -18,15 +18,20 @@ namespace HomeworkAssignment.DepthCalculatorApp
 
             // recursive case: the depth of the branch is the maximum depth of its sub-branches plus 1
             int maxDepth = 0;
+
+            // loop through each sub-branch and calculate its depth
             foreach (Branch subBranch in b.branches)
             {
+                // calculate the depth of the sub-branch
                 int depth = CalculateDepth(subBranch);
 
+                // if the depth of the sub-branch is greater than the current max depth, update the max depth
                 if (depth > maxDepth)
                 {
                     maxDepth = depth;
                 }
             }
+            // return the max depth of the sub-branches plus 1
             return maxDepth + 1;
         }
     }

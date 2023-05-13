@@ -43,10 +43,12 @@ namespace HomeworkAssignment
             // get input from user and split it into hours and minutes
             string[] timeParts = Console.ReadLine()!.Split(':');
 
+            // parse the hours and minutes into integers
             int hours = int.Parse(timeParts[0]);
             int minutes = int.Parse(timeParts[1]);
             Console.WriteLine("\n-----------------------------------------");
 
+            // create a new clock and calculator
             var clock = new Clock(hours, minutes);
             var calculator = new ClockAngleCalculator(clock);
 
@@ -55,9 +57,11 @@ namespace HomeworkAssignment
 
         private static void BranchDepthCalculatorApp()
         {
+            // create the Root of a recursive structure
             Branch root = new Branch();
             root.branches = new List<Branch>();
 
+            // add some branches
             Branch child1 = new Branch();
             child1.branches = new List<Branch>();
             root.branches.Add(child1);
@@ -65,6 +69,7 @@ namespace HomeworkAssignment
             Branch child2 = new Branch();
             root.branches.Add(child2);
 
+            // add sub-branches
             Branch grandchild1 = new Branch();
             grandchild1.branches = new List<Branch>();
             child1.branches.Add(grandchild1);
