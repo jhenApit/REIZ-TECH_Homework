@@ -40,6 +40,7 @@ namespace HomeworkAssignment
         private static void ClockAngleCalculatorApp()
         {
             Console.WriteLine("Please enter the time in the format of 'hh:mm' :");
+            // get input from user and split it into hours and minutes
             string[] timeParts = Console.ReadLine()!.Split(':');
 
             int hours = int.Parse(timeParts[0]);
