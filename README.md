@@ -8,12 +8,12 @@ https://www.omnicalculator.com/math/clock-angle#clock-angles-the-angle-between-c
 
 This method calculates the angle between the hour hand and minute hand based on their positions on the clock face and their relative distances from the 12 o'clock position. To implement this formula in code, I first extracted the hour and minute values from the user's input and then calculated their positions on the clock face. I then used the formula to compute the angle between the hands and returned the lesser angle between the two possible angles.
 
-I implemented the clock and angle calculator as separate classes. The `Clock` class stores the hours and minutes of the clock, and the `AngleCalculator` class takes a `Clock` object as input and computes the lesser angle between the hour and minute hands.
+I implemented the clock and angle calculator as separate classes. The `Clock` class stores the hours and minutes of the clock, and the `ClockAngleCalculator` class takes a `Clock` object as input and computes the lesser angle between the hour and minute hands.
 
 ## Tree Structure Depth Calculator App
 For the second part of the Assignment, it reminded me of a Binary Tree traversal so I used the same recursive algorithm for calculating the depth of the tree. 
 
-The `CalculateDepth` method in the `Branch` class is similar to a traversal algorithm, where we check if the current node has any child branches and recursively traverse them to calculate their depth. We use a base case to handle the situation where the current node has no child branches, and we return a depth of 1.
+The `CalculateDepth` method in the `BranchDepthCalculator` class is similar to a traversal algorithm, where we check if the current node has any child branches and recursively traverse them to calculate their depth. We use a base case to handle the situation where the current node has no child branches, and we return a depth of 1.
 
 In the recursive case, we calculate the depth of each child branch and return the maximum depth among all child branches plus 1, which represents the depth of the current node. This algorithm ensures that we traverse the entire tree and return the correct depth of the structure.
 
