@@ -6,6 +6,11 @@ namespace HomeworkAssignment
     {
         static void Main(string[] args)
         {
+            ClockAngleCalculator();
+        }
+
+        private static void ClockAngleCalculator()
+        {
             Console.WriteLine("Please enter the time in the format of 'hh:mm' :");
             string[] timeParts = Console.ReadLine()!.Split(':');
 
@@ -16,7 +21,7 @@ namespace HomeworkAssignment
             var clock = new Clock(hours, minutes);
             var calculator = new ClockAngleCalculator(clock);
 
-            Console.WriteLine($"The angle between the hour and minute hands is: {calculator.CalculateLesserAngle()} degrees");
+            Console.WriteLine($"The angle between the hour and minute hands is: {calculator.CalculateLesserAngle()} degrees.");
         }
     }
 }
